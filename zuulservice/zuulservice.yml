@@ -20,7 +20,4 @@ zuul:
     itemservice: /item/**
   ignored-services: '*'
   prefix: /api
-
-
-zuul:
   sensitive-headers: Cookie, Set-Cookie
