@@ -1,0 +1,4 @@
+security:
+ oauth2:
+  resource:
+    userInfoUri: http://127.0.0.1:8901/user
