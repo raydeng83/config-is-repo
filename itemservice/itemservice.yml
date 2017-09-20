@@ -52,3 +52,7 @@ security:
  oauth2:
   resource:
     userInfoUri: http://localhost:8901/user
+
+redis:
+  server: "localhost"
+  port: "6379"
