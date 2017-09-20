@@ -17,6 +17,17 @@ spring:
   jpa:
     hibernate:
       ddl-auto: update
+  cloud:
+    stream:
+      bindings:
+        output:
+            destination:  userChangeTopic
+            content-type: application/json
+      kafka:
+        binder:
+          zkNodes: localhost
+          brokers: localhost
+      
 # security:
 #   basic:
 #     enabled: false
@@ -41,3 +52,5 @@ security:
  oauth2:
   resource:
     userInfoUri: http://localhost:8901/user
+
+
