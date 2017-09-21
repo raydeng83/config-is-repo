@@ -21,13 +21,17 @@ spring:
     stream:
       bindings:
         inboundOrgChanges:
-          destination: orgChangeTopic
+          destination: userChangeTopic
           content-type: application/json
-          group: licensingGroup
+          group: userGroup
       kafka:
         binder:
           zkNodes: localhost
           brokers: localhost
+        input:
+          destination: userChangeTopic
+          content-type: application/json
+          group: userGroup
 # security:
 #   basic:
 #     enabled: false
