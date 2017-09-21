@@ -20,7 +20,7 @@ spring:
   cloud:
     stream:
       bindings:
-        inboundOrgChanges:
+        inboundUserChanges:
           destination: userChangeTopic
           content-type: application/json
           group: userGroup
