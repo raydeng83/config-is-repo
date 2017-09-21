@@ -57,6 +57,5 @@ security:
   resource:
     userInfoUri: http://localhost:8901/user
 
-redis:
-  server: "localhost"
-  port: "6379"
+redis.server: "localhost"
+redis.port: "6379"
