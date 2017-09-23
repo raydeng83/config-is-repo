@@ -1,7 +1,7 @@
 security:
  oauth2:
   resource:
-    userInfoUri: http://localhost:8901/user
+    userInfoUri: http://52.87.220.41:8901/user
 
 server.port: 8901
 signing.key: 345345fsdgsf5345
