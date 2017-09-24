@@ -1,5 +1,7 @@
 server.port: 8082
 
+domain.uri: 52.87.220.41
+
 signing.key: 345345fsdgsf5345
 
 tracer.property: "I AM THE DEFAULT"
@@ -8,7 +10,7 @@ spring.jpa.show-sql: "true"
 spring.database.driverClassName: "com.mysql.jdbc.Driver"
 spring.datasource.url: "jdbc:mysql://mysqldb.c4v3j9tgecmv.us-east-1.rds.amazonaws.com:3306/itemsharing"
 spring.datasource.username: "root"
-spring.datasource.password: "Rochester24"
+spring.datasource.password: "{cipher}3c0309574137fe472814543612b2866aaf6c103271478299a35379c85a6f1dfe"
 spring.datasource.testWhileIdle: "true"
 spring.datasource.validationQuery: "SELECT 1"
 spring.jpa.properties.hibernate.dialect:
@@ -43,7 +45,7 @@ eureka:
     registerWithEureka: true
     fetchRegistry: true
     serviceUrl:
-        defaultZone: http://52.87.220.41:8761/eureka/
+        defaultZone: http://${domain.uri}:8761/eureka/
 
 #Setting the logging levels for the service
 logging:
@@ -55,7 +57,7 @@ logging:
 security:
  oauth2:
   resource:
-    userInfoUri: http://52.87.220.41:8901/user
+    userInfoUri: http://${domain.uri}:8901/user
 
 redis.server: "localhost"
 redis.port: "6379"
