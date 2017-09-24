@@ -22,3 +22,12 @@ spring:
   jpa:
     hibernate:
       ddl-auto: update
+
+eureka:
+  instance:
+    preferIpAddress: true
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+        defaultZone: http://52.87.220.41:8761/eureka/
