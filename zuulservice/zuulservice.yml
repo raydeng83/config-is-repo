@@ -29,6 +29,6 @@ Hystrix:
       execution:
         isolation:
           thread:
-            timeoutInMilliseconds: 2500
+            timeoutInMilliseconds: 10000
 
 itemservice.ribbon.ReadTimeout: 7000
