@@ -23,12 +23,20 @@ zuul:
   prefix: /api
   sensitive-headers: Cookie, Set-Cookie
 
-Hystrix:
+# Hystrix:
+#   command:
+#     default:
+#       execution:
+#         isolation:
+#           thread:
+#             timeoutInMilliseconds: 10000
+
+hystrix:
   command:
-    default:
-      execution:
-        isolation:
-          thread:
-            timeoutInMilliseconds: 10000
+    choose:
+      default:
+        execution:
+          timeout:
+            enabled: false
 
 itemservice.ribbon.ReadTimeout: 7000
